@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Services\" />
+    <None Remove="ViewModels\" />
+    <None Remove="InputModels\" />
+    <None Remove="Microsoft.Extensions.DependencyInjection.Abstractions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="InputModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AwesomeSocialMedia.Posts.Infrastructure\AwesomeSocialMedia.Posts.Infrastructure.csproj" />
+    <ProjectReference Include="..\AwesomeSocialMedia.Posts.Core\AwesomeSocialMedia.Posts.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+  </ItemGroup>
+</Project>

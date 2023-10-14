@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="RabbitMQ.Client" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="Consumers\" />
+    <None Remove="MassTransit.RabbitMQ" />
+    <None Remove="Core\" />
+    <None Remove="Core\Entities\" />
+    <None Remove="RabbitMQ.Client" />
+    <None Remove="Core\Repositories\" />
+    <None Remove="Infrastructure\" />
+    <None Remove="Infrastructure\Persistence\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Consumers\" />
+    <Folder Include="Core\" />
+    <Folder Include="Core\Entities\" />
+    <Folder Include="Core\Repositories\" />
+    <Folder Include="Infrastructure\" />
+    <Folder Include="Infrastructure\Persistence\" />
+  </ItemGroup>
+</Project>
