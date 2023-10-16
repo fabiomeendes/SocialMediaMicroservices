@@ -36,7 +36,6 @@ namespace AwesomeSocialMedia.Users.API.Controllers
             return CreatedAtAction(nameof(GetById), new { id = result.Data }, command);
         }
 
-        // api/users/123124 HTTP PUT
         [HttpPut("{id}")]
         public async Task<IActionResult> Put(Guid id, UpdateUserCommand command)
         {

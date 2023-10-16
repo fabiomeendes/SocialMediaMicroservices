@@ -21,14 +21,6 @@ namespace AwesomeSocialMedia.Users.Application.Commands.SignUpUser
 
             await _repository.AddAsync(user);
 
-            /*try
-            {
-                _bus.Publish(user);
-            } catch (Exception)
-            {
-                _outboxRepository.Add(user.Events.First());
-            }*/
-
             return new BaseResult<Guid>(user.Id);
         }
     }
