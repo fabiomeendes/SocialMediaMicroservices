@@ -6,6 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddHostedService<PostCreatedConsumer>();
+builder.Services.AddHostedService<UserUpdatedConsumer>();
 builder.Services.AddSingleton<IUserNewsfeedRepository, UserNewsfeedRepository>();
 
 builder.Services.AddControllers();

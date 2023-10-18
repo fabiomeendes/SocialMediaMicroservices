@@ -1,7 +1,6 @@
-﻿using System;
-namespace AwesomeSocialMedia.Posts.Infrastructure.EventBus
+﻿namespace AwesomeSocialMedia.Posts.Infrastructure.EventBus
 {
-	public interface IEventBus
+    public interface IEventBus
 	{
 		void Publish<T>(T @event);
 	}

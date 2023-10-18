@@ -42,6 +42,7 @@ namespace AwesomeSocialMedia.Newsfeed.API.Consumers
                 var json = Encoding.UTF8.GetString(contentArray);
 
                 // Converter o evento utilizando JsonConvert.Deserializeobject<T>
+                // Realizar o update na base de dados do NewsFeed
 
                 _channel.BasicAck(eventArgs.DeliveryTag, false);
             };

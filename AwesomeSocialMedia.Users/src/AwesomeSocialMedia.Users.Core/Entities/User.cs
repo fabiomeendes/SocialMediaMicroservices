@@ -7,8 +7,7 @@ namespace AwesomeSocialMedia.Users.Core.Entities
 {
     public class User : AggregateRoot
     {
-        public User(string fullName, string displayName, DateTime birthDate, string email)
-            : base()
+        public User(string fullName, string displayName, DateTime birthDate, string email) : base()
         {
             FullName = fullName;
             DisplayName = displayName;
@@ -44,6 +43,8 @@ namespace AwesomeSocialMedia.Users.Core.Entities
             Description = description;
             Location = location;
             Contact = contact;
+
+            Events.Add(new UserUpdated(DisplayName, Header, Description, Location, Contact));
         }
     }
 }
